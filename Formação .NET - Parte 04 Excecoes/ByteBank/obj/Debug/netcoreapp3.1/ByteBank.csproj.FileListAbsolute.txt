@@ -1,0 +1,13 @@
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\bin\Debug\netcoreapp3.1\ByteBank.exe
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\bin\Debug\netcoreapp3.1\ByteBank.deps.json
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\bin\Debug\netcoreapp3.1\ByteBank.runtimeconfig.json
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\bin\Debug\netcoreapp3.1\ByteBank.runtimeconfig.dev.json
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\bin\Debug\netcoreapp3.1\ByteBank.dll
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\bin\Debug\netcoreapp3.1\ByteBank.pdb
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.csprojAssemblyReference.cache
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.csproj.CoreCompileInputs.cache
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.AssemblyInfoInputs.cache
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.AssemblyInfo.cs
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.dll
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.pdb
+C:\Users\PauloLima\Desktop\Formacao .NET\Formação .NET - Parte 04 Excecoes\ByteBank\obj\Debug\netcoreapp3.1\ByteBank.genruntimeconfig.cache
