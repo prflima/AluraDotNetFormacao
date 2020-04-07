@@ -1,10 +1,56 @@
 ﻿using System;
+using System.IO;
 
 namespace ByteBank
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            try
+            {
+                CarregarContas();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Exceção no método main");
+            }
+
+            //Metodo();
+
+            Console.WriteLine("Execução finalizada. Tecle enter para sair");
+            Console.ReadLine();
+        }
+
+        private static void CarregarContas()
+        {
+            using (LeitorDeArquivos leitor = new LeitorDeArquivos("teste.txt"))
+            {
+                leitor.LerProximaLinha();
+            }
+
+            //LeitorDeArquivos leitor = null;
+            //try
+            //{
+            //    leitor = new LeitorDeArquivos("Contas.txt");
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+            //}
+            //catch (IOException)
+            //{
+            //    Console.WriteLine("Exceção do tipo IO capturada e tratada.");
+            //}
+            //finally
+            //{
+            //    if (leitor != null)
+            //    {
+            //        leitor.Fechar();
+            //    }
+            //}
+        }
+
+        private static void TestandoInnerException()
         {
             try
             {
@@ -16,13 +62,8 @@ namespace ByteBank
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);   
+                Console.WriteLine(ex.StackTrace);
             }
-
-            //Metodo();
-
-            Console.WriteLine("Execução finalizada. Tecle enter para sair");
-            Console.ReadLine();
         }
 
         // Teste com a cadeia de chamada:
