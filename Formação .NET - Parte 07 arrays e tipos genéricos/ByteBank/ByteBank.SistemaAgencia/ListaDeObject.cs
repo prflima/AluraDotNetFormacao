@@ -1,5 +1,4 @@
-﻿using ByteBank.Modelos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace ByteBank.SistemaAgencia
 {
-    public class ListaDeContaCorrente
+    public class ListaDeObject
     {
-        private ContaCorrente[] _itens;
+        private object[] _itens;
         private int _proximaPosicao;
-        public int Tamanho 
-        { 
+        public int Tamanho
+        {
             get
             {
                 return _proximaPosicao;
             }
         }
 
-        public ListaDeContaCorrente(int capacidade = 5)
+        public ListaDeObject(int capacidade = 5)
         {
-            _itens = new ContaCorrente[capacidade];
+            _itens = new object[capacidade];
             _proximaPosicao = 0;
         }
 
-        public void Adicionar(ContaCorrente item)
+        public void Adicionar(object item)
         {
             VerificaCapacidade(_proximaPosicao + 1);
             Console.WriteLine($"Adionando item no indíce {_proximaPosicao}");
@@ -34,15 +33,15 @@ namespace ByteBank.SistemaAgencia
             _proximaPosicao++;
         }
 
-        public void AdicionarVarios(params ContaCorrente[] itens)
+        public void AdicionarVarios(params object[] itens)
         {
-            foreach (ContaCorrente conta in itens)
+            foreach (object item in itens)
             {
-                Adicionar(conta);
+                Adicionar(item);
             }
         }
 
-        public void Remover(ContaCorrente item)
+        public void Remover(object item)
         {
             int indiceItem = -1;
 
@@ -64,16 +63,7 @@ namespace ByteBank.SistemaAgencia
             _itens[_proximaPosicao] = null;
         }
 
-        public void Escrever()
-        {
-            for (int i = 0; i < _proximaPosicao; i++)
-            {
-                ContaCorrente conta = _itens[i];
-                Console.WriteLine($"Conta no indíce {i}, Numero {conta.Numero} e Agencia {conta.Agencia}");
-            }
-        }
-
-        public ContaCorrente GetContaCorrenteIndice(int indice)
+        public object GetObjectNoIndice(int indice)
         {
             if (indice < 0 || indice >= _proximaPosicao)
             {
@@ -96,7 +86,7 @@ namespace ByteBank.SistemaAgencia
                 novoTamanho = tamanhoNecessario;
             }
 
-            ContaCorrente[] novoArray = new ContaCorrente[novoTamanho];
+            object[] novoArray = new object[novoTamanho];
 
             for (int index = 0; index < _itens.Length; index++)
             {
@@ -106,11 +96,11 @@ namespace ByteBank.SistemaAgencia
             _itens = novoArray;
         }
 
-        public ContaCorrente this[int indice]
+        public object this[int indice]
         {
             get
             {
-                return GetContaCorrenteIndice(indice);
+                return GetObjectNoIndice(indice);
             }
         }
     }

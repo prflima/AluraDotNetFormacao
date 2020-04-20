@@ -13,19 +13,31 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+
+            Console.ReadLine();
+        }    
+        
+        static void TesteArrayContaCorrente()
+        {
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
             ContaCorrente contaDoPaulo = new ContaCorrente(111, 222222);
 
-            lista.Adicionar(new ContaCorrente(889, 9989898));
-            lista.Adicionar(new ContaCorrente(889, 787875));
-            lista.Adicionar(new ContaCorrente(889, 544333));
-            lista.Adicionar(contaDoPaulo);
-            lista.Escrever();
-            Console.WriteLine("Removendo item");
-            lista.Remover(contaDoPaulo);
-            lista.Escrever();
-            Console.ReadLine();
-        }       
+            //lista.Adicionar(new ContaCorrente(889, 9989898));
+            //lista.Adicionar(new ContaCorrente(889, 787875));
+            //lista.Adicionar(new ContaCorrente(889, 544333));
+            //lista.Escrever();
+            //Console.WriteLine("Removendo item");
+            //lista.Remover(contaDoPaulo);
+            //lista.Escrever();
+
+            lista.AdicionarVarios(contaDoPaulo, new ContaCorrente(889, 9989898), new ContaCorrente(889, 787875));
+
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                ContaCorrente itemAtual = lista[i];
+                Console.WriteLine($"Item na posição {i} = Conta: {itemAtual.Numero}/{itemAtual.Agencia}");
+            }
+        }
         
         static void TestaArray()
         {
