@@ -1,4 +1,5 @@
 ﻿using ByteBank.Modelos;
+using ByteBank.SistemaAgencia.Comparadores;
 using Humanizer;
 using System;
 using System.Collections.Generic;
@@ -16,16 +17,20 @@ namespace ByteBank.SistemaAgencia
             var contas = new List<ContaCorrente>() 
             {
                 new ContaCorrente(123, 909090),
-                new ContaCorrente(123, 7676767),
-                new ContaCorrente(123, 700707),
-                new ContaCorrente(123, 808080)
+                null,
+                new ContaCorrente(909, 7676767),
+                new ContaCorrente(237, 700707),
+                null,
+                new ContaCorrente(980, 808080)
             };
 
-            contas.Sort(); // não ordena classe, resolução na próxima aula
+            //contas.Sort(new ComparadorContaCorrentePorAgencia()); 
 
-            foreach (var conta in contas)
+            var contasOrdenadas = contas.Where(ct => ct != null).OrderBy(ct => ct.Numero);
+
+            foreach (var conta in contasOrdenadas)
             {
-                Console.WriteLine(conta);
+                Console.WriteLine($"Conta: Número: {conta.Numero}, Agencia: {conta.Agencia}");
             }            
 
             Console.ReadLine();
